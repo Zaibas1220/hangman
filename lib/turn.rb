@@ -16,7 +16,7 @@ def turn_english(game_data)
     puts "Word: #{game_data.displaying_word.capitalize}"
 
     puts "Write a letter"
-    input = gets.chomp
+    input = gets.chomp.downcase
 
     if input.length > 1 && input.include?("/")
       case input
@@ -96,7 +96,7 @@ def turn_english(game_data)
   
   puts "#{game_data.wrong_letters}\n\n\n#{game_data.displaying_word.capitalize}\nWrite the word"
 
-  input = gets.chomp
+  input = gets.chomp.downcase
   
     if input.include?("/")
       case input
@@ -173,7 +173,7 @@ def turn_italian(game_data)
     puts "Parola: #{game_data.displaying_word.capitalize}"
 
     puts "Scrivi una lettera"
-    input = gets.chomp
+    input = gets.chomp.downcase
 
     if input.length > 1 && input.include?("/")
       case input
@@ -253,7 +253,7 @@ def turn_italian(game_data)
   
   puts "#{game_data.wrong_letters}\n\n\n#{game_data.displaying_word.capitalize}\nScrivi la parola"
 
-  input = gets.chomp
+  input = gets.chomp.downcase
   
     if input.include?("/")
       case input
