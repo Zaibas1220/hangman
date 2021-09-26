@@ -18,18 +18,10 @@ def select_language(current_language, game_data)
         italian_menu(game_data)
       when "2"
         system("clear")
-        case current_language
-          when "english"
-            system("clear")
-            puts "Currently unvaiable.\nYou will be redirected to the main menu"
-            sleep(3)
-            default_menu(game_data)
-          when "italian"
-            system("clear")
-            puts "Momentaneamente non disponibile.\nVerrai riportato al menu principale"
-            sleep(3)
-            italian_menu(game_data)
-          end
+        system("clear")
+        puts "Currently unvaiable.\nYou will be redirected to the main menu"
+        sleep(3)
+        default_menu(game_data)
       when "3"
         system("clear")
         default_menu(game_data)
@@ -54,7 +46,9 @@ def select_language(current_language, game_data)
         default_menu(game_data)
       when "2"
         system("clear")
-        dutch_menu(game_data)
+        puts "Momentaneamente non disponibile.\nVerrai riportato al menu principale"
+        sleep(3)
+        italian_menu(game_data)
       when "3"
         system("clear")
         italian_menu(game_data)
@@ -96,8 +90,8 @@ def default_menu(game_data)
         system("clear")
       else
         saves_names = Dir.entries("../data")
-        .select {|save_name| save_name != "." && save_name != ".."}
-        .map {|save_name| save_name.gsub(".json", "")}
+          .select { |save_name| save_name != "." && save_name != ".." }
+          .map { |save_name| save_name.gsub(".json", "") }
         puts "Saves\n#{saves_names}"
 
         puts "\nWrite the save name!\n(Use '/back' to return to the game)"
@@ -166,8 +160,8 @@ def italian_menu(game_data)
         system("clear")
       else
         saves_names = Dir.entries("../data")
-        .select {|save_name| save_name != "." && save_name != ".."}
-        .map {|save_name| save_name.gsub(".json", "")}
+          .select { |save_name| save_name != "." && save_name != ".." }
+          .map { |save_name| save_name.gsub(".json", "") }
         puts "Salvataggi\n#{saves_names}"
 
         puts "\nScrivi il nome per il salvataggio!\n(Usa '/ritorna' per tornare al menu)"
@@ -205,7 +199,7 @@ def italian_menu(game_data)
   end
 end
 
-def dutch_menu()
+def dutch_menu(game_data)
   puts "Cooming Soon!"
 end
 
