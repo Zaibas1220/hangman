@@ -19,6 +19,7 @@ def parola_casuale()
   english_dictionary.lines.each do |word|
     word.gsub!("\n", "")
     word.gsub!("\r", "")
+    word.gsub!(" ", "")
     if word.to_s.length > 5 && word.to_s.length <= 12
       word_list.push(word)
     end

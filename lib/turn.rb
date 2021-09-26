@@ -6,6 +6,8 @@ def turn_english(game_data)
     puts game_data.wrong_letters.to_s
     puts "--------------------------------------------"
     puts "\n\n\n\n\n\n\n\n\n"
+    puts game_data.secret_word.length
+    puts game_data.displaying_word.length
 
     if game_data.lives_counter > 1
       puts "You have #{game_data.lives_counter} lives"
@@ -164,6 +166,8 @@ def turn_italian(game_data)
     puts "--------------------------------------------"
     puts "\n\n\n\n\n\n\n\n\n"
 
+    puts game_data.secret_word.length
+    puts game_data.displaying_word.length
     if game_data.lives_counter > 1
       puts "Hai #{game_data.lives_counter} vite"
     else

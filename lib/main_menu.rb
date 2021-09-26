@@ -129,6 +129,8 @@ def default_menu(game_data)
       exit!
     else
       puts "Invalid Input!"
+      sleep(1)
+      default_menu(game_data)
     end
   end
 end
@@ -197,6 +199,8 @@ def italian_menu(game_data)
       exit!
     else
       puts "Input inesistente!"
+      sleep(1)
+      italian_menu(game_data)
     end
   end
 end

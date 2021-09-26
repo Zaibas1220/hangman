@@ -22,6 +22,7 @@ class GameData
 
   def italian_word()
     @secret_word = parola_casuale()
+    @displaying_word = building_string()
   end
 
   def update_lives()
@@ -29,8 +30,8 @@ class GameData
   end
 
   def building_string()
-    word_length = @secret_word.length - 2
-    string = "_"
+    word_length = @secret_word.length - 1
+    string = ""
 
     for i in 0..word_length
       string += "_"
